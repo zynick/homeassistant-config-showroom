@@ -1,0 +1,42 @@
+
+
+# http://developer.digitalstrom.org/Architecture/ds-basics.pdf page47
+ds_scene_present: 'curl http://localhost:3000/ds/api?path=/json/apartment/callScene?sceneNumber=71'
+ds_scene_abscent: 'curl http://localhost:3000/ds/api?path=/json/apartment/callScene?sceneNumber=72'
+ds_scene_door_bell: 'curl http://localhost:3000/ds/api?path=/json/apartment/callScene?sceneNumber=73'
+ds_scene_panic: 'curl http://localhost:3000/ds/api?path=/json/apartment/callScene?sceneNumber=65'
+
+ds_living_light_0: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?id=1%26groupID=1%26sceneNumber=0'
+ds_living_light_1: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?id=1%26groupID=1%26sceneNumber=5'
+ds_living_light_2: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?id=1%26groupID=1%26sceneNumber=17'
+ds_living_light_3: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?id=1%26groupID=1%26sceneNumber=18'
+ds_living_light_4: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?id=1%26groupID=1%26sceneNumber=19'
+
+ds_dining_light_0: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?id=2%26groupID=1%26sceneNumber=0'
+ds_dining_light_1: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?id=2%26groupID=1%26sceneNumber=5'
+ds_dining_light_2: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?id=2%26groupID=1%26sceneNumber=17'
+ds_dining_light_3: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?id=2%26groupID=1%26sceneNumber=18'
+ds_dining_light_4: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?id=2%26groupID=1%26sceneNumber=19'
+
+ds_bedroom_light_0: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?id=3%26groupID=1%26sceneNumber=0'
+ds_bedroom_light_1: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?id=3%26groupID=1%26sceneNumber=5'
+ds_bedroom_light_2: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?id=3%26groupID=1%26sceneNumber=17'
+ds_bedroom_light_3: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?id=3%26groupID=1%26sceneNumber=18'
+ds_bedroom_light_4: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?id=3%26groupID=1%26sceneNumber=19'
+
+ds_office_light_0: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?id=4%26groupID=1%26sceneNumber=0'
+ds_office_light_1: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?id=4%26groupID=1%26sceneNumber=5'
+ds_office_light_2: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?id=4%26groupID=1%26sceneNumber=17'
+ds_office_light_3: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?id=4%26groupID=1%26sceneNumber=18'
+ds_office_light_4: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?id=4%26groupID=1%26sceneNumber=19'
+
+
+
+
+
+
+# scripting made things very, very flexible... (for POC only)
+# globalcache_temperature: 'mosquitto_pub -t "smartbox/globalcache/set" -m "TEMP_{{states.input_select.globalcache_temperature.state}}"'
+
+# TODO only works if you made this service as a hass-daemon (duh)
+restart_ha: service hass-daemon restart &

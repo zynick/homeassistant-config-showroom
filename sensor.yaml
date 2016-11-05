@@ -1,0 +1,24 @@
+
+- platform: rest
+  resource: http://localhost:3000/ds/getLastCallSceneName?id=1&groupID=1
+  method: GET
+  name: dS Living Room Light Status
+  value_template: '{{ value_json.result.name }}'
+
+- platform: rest
+  resource: http://localhost:3000/ds/getLastCallSceneName?id=2&groupID=1
+  method: GET
+  name: dS Dining Room Light Status
+  value_template: '{{ value_json.result.name }}'
+
+- platform: rest
+  resource: http://localhost:3000/ds/getLastCallSceneName?id=3&groupID=1
+  method: GET
+  name: dS Bedroom Light Status
+  value_template: '{{ value_json.result.name }}'
+
+- platform: rest
+  resource: http://localhost:3000/ds/getLastCallSceneName?id=4&groupID=1
+  method: GET
+  name: dS Office Light Status
+  value_template: '{{ value_json.result.name }}'

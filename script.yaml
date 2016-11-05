@@ -1,0 +1,113 @@
+
+ds_scene_present:
+  alias: Coming Home
+  sequence:
+    - service: shell_command.ds_scene_present
+
+ds_scene_abscent:
+  alias: Leaving Home
+  sequence:
+    - service: shell_command.ds_scene_abscent
+
+ds_scene_door_bell:
+  alias: Door Bell
+  sequence:
+    - service: shell_command.ds_scene_door_bell
+
+ds_scene_panic:
+  alias: Panic
+  sequence:
+    - service: shell_command.ds_scene_panic
+    # - service: notify.email
+    #   data:
+    #     title: 'SMARTBOX Panic Mode Triggered!'
+    #     message: "Panic Mode Triggered @ {{ as_timestamp(now()) | timestamp_local }}"
+    # - service: notify.pushbullet
+    #   data:
+    #     message: "Panic Mode Triggered @ {{ as_timestamp(now()) | timestamp_local }}"
+
+
+
+ds_living_light_0:
+  alias: Lights Off
+  sequence:
+    - service: shell_command.ds_living_light_0
+ds_living_light_1:
+  alias: Living Lights On
+  sequence:
+    - service: shell_command.ds_living_light_1
+ds_living_light_2:
+  alias: Movie Mode
+  sequence:
+    - service: shell_command.ds_living_light_2
+ds_living_light_3:
+  alias: TV Mode
+  sequence:
+    - service: shell_command.ds_living_light_3
+ds_living_light_4:
+  alias: Dim Mode
+  sequence:
+    - service: shell_command.ds_living_light_4
+
+ds_dining_light_0:
+  alias: Lights Off
+  sequence:
+    - service: shell_command.ds_dining_light_0
+ds_dining_light_1:
+  alias: Dining Lights On
+  sequence:
+    - service: shell_command.ds_dining_light_1
+ds_dining_light_2:
+  alias: Comfort Dining
+  sequence:
+    - service: shell_command.ds_dining_light_2
+ds_dining_light_3:
+  alias: Rommance Dining
+  sequence:
+    - service: shell_command.ds_dining_light_3
+ds_dining_light_4:
+  alias: White Lights
+  sequence:
+    - service: shell_command.ds_dining_light_4
+
+ds_bedroom_light_0:
+  alias: Lights Off
+  sequence:
+    - service: shell_command.ds_bedroom_light_0
+ds_bedroom_light_1:
+  alias: All Lights On
+  sequence:
+    - service: shell_command.ds_bedroom_light_1
+ds_bedroom_light_2:
+  alias: Comfort Mode
+  sequence:
+    - service: shell_command.ds_bedroom_light_2
+ds_bedroom_light_3:
+  alias: TV Mode
+  sequence:
+    - service: shell_command.ds_bedroom_light_3
+ds_bedroom_light_4:
+  alias: Desk Mode
+  sequence:
+    - service: shell_command.ds_bedroom_light_4
+
+ds_office_light_0:
+  alias: Lights Off
+  sequence:
+    - service: shell_command.ds_office_light_0
+ds_office_light_1:
+  alias: All Lights On
+  sequence:
+    - service: shell_command.ds_office_light_1
+ds_office_light_2:
+  alias: Downlights Only
+  sequence:
+    - service: shell_command.ds_office_light_2
+ds_office_light_3:
+  alias: T5 Only
+  sequence:
+    - service: shell_command.ds_office_light_3
+ds_office_light_4:
+  alias: Dim Mode
+  sequence:
+    - service: shell_command.ds_office_light_4
