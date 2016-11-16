@@ -9,6 +9,7 @@ homeassistant:
 
 # Enable this for production
 http:
+  # server_port: 80
   # api_password: !secret http_api_password
   # ssl_certificate: !secret http_ssl_certificate
   # ssl_key: !secret http_ssl_key
