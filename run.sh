@@ -2,4 +2,4 @@
 
 # hass --config . --script check_config
 
-hass --config . --open-u
+hass --config . --open-ui
