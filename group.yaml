@@ -7,22 +7,21 @@
 default_view:
   view: yes
   entities:
+    - group.card_cam_main_door
     - group.card_ds
-    # - group.card_ds_living
-    # - group.card_ds_dining
-    # - group.card_ds_bedroom
-    # - group.card_ds_office
 
 living:
   view: yes
   name: Living Room
   entities:
+    - group.card_cam_living_room
     - group.card_ds_living
 
 dining:
   view: yes
   name: Dining Room
   entities:
+    - group.card_cam_dining_area
     - group.card_ds_dining
 
 bedroom:
@@ -35,7 +34,17 @@ office:
   view: yes
   name: Office
   entities:
+    - group.card_cam_office_area
     - group.card_ds_office
+
+cctv:
+  view: yes
+  name: CCTV
+  entities:
+    - group.card_cam_main_door
+    - group.card_cam_living_room
+    - group.card_cam_dining_area
+    - group.card_cam_office_area
 
 
 
@@ -92,3 +101,15 @@ card_ds_office:
     - script.ds_office_light_3
     - script.ds_office_light_4
     - script.ds_office_light_0
+
+card_cam_main_door:
+  - camera.main_door
+
+card_cam_living_room:
+  - camera.living_room
+
+card_cam_dining_area:
+  - camera.dining_area
+
+card_cam_office_area:
+  - camera.office_area
