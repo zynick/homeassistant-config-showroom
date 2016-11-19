@@ -38,7 +38,7 @@ zone:
 # Components               #
 ############################
 
-automation: !include automation.yaml
+# automation: !include automation.yaml
 camera: !include camera.yaml
 group: !include group.yaml
 # input_select: !include input_select.yaml
