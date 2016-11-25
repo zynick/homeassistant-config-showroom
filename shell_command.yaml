@@ -30,7 +30,9 @@ ds_office_light_2: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?
 ds_office_light_3: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?id=4%26groupID=1%26sceneNumber=18'
 ds_office_light_4: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?id=4%26groupID=1%26sceneNumber=19'
 
-
+# TODO not exactly a proper way to do it but will fix this later
+gc_dining_aircond_onoff: 'mosquitto_pub -v -t smartbox/globalcache/set -m dining_onoff'
+gc_office_aircond_onoff: 'mosquitto_pub -v -t smartbox/globalcache/set -m office_onoff'
 
 
 

@@ -9,6 +9,7 @@ default_view:
   entities:
     - group.card_cam_main_door
     - group.card_ds
+    - group.card_globalcache
 
 living:
   view: yes
@@ -113,3 +114,8 @@ card_cam_dining_area:
 
 card_cam_office_area:
   - camera.office_area
+
+card_globalcache:
+  name: GlobalCache Aircond
+  entities:
+    - script.gc_dining_aircond_onoff

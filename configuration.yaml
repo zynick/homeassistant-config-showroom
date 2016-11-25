@@ -8,15 +8,23 @@ homeassistant:
   customize: !include customize.yaml
 
 # Enable this for production
-http:
-  # server_port: 80
-  # api_password: !secret http_api_password
-  # ssl_certificate: !secret http_ssl_certificate
-  # ssl_key: !secret http_ssl_key
-  cors_allowed_origins:
-    - https://google.com
-    - https://home-assistant.io
+# http:
+#   server_port: 80
+#   api_password: !secret http_api_password
+#   ssl_certificate: !secret http_ssl_certificate
+#   ssl_key: !secret http_ssl_key
+#   cors_allowed_origins:
+#     - http://smartboxasia.com
+#     - https://google.com
+#     - https://home-assistant.io
 
+mqtt:
+  broker: localhost
+  port: 1883
+  client_id: smartbox_ha
+  keepalive: 60
+  # username: !secret mqtt_user
+  # password: !secret mqtt_pass
 
 
 ############################

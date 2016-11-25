@@ -111,3 +111,13 @@ ds_office_light_4:
   alias: Dim Mode
   sequence:
     - service: shell_command.ds_office_light_4
+
+gc_dining_aircond_onoff:
+  alias: Dining Aircond On Off
+  sequence:
+    - service: shell_command.gc_dining_aircond_onoff
+
+gc_office_aircond_onoff:
+  alias: Office Aircond On Off
+  sequence:
+    - service: shell_command.gc_office_aircond_onoff
