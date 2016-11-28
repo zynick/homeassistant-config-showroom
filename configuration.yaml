@@ -46,10 +46,10 @@ zone:
 # Components               #
 ############################
 
-# automation: !include automation.yaml
+automation: !include automation.yaml
 camera: !include camera.yaml
 group: !include group.yaml
-# input_select: !include input_select.yaml
+input_select: !include input_select.yaml
 # input_slider: !include input_slider.yaml
 # notify: !include notify.yaml
 script: !include script.yaml

@@ -1,0 +1,6 @@
+- alias: 'GlobalCache Aircond Temperature'
+  trigger:
+    - platform: state
+      entity_id: input_select.globalcache_temperature
+  action:
+    service: shell_command.globalcache_temperature
