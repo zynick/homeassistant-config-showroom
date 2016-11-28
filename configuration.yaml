@@ -56,7 +56,7 @@ script: !include script.yaml
 sensor: !include sensor.yaml
 shell_command: !include shell_command.yaml
 sun: # Track the sun
-switch: !include switch.yaml
+# switch: !include switch.yaml
 
 
 

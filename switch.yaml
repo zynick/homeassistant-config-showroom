@@ -1,3 +1,0 @@
-- platform: mqtt
-  name: GlobalCache Switch
-  command_topic: smartbox/globalcache/set

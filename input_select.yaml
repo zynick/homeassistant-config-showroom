@@ -1,5 +1,26 @@
-globalcache_temperature:
-  name: GlobalCache Temperature (°C)
+gc_dining_aircond_temp:
+  name: Dining Temperature (°C)
+  icon: mdi:thermometer
+  initial: '16'
+  options:
+   - '16'
+   - '17'
+   - '18'
+   - '19'
+   - '20'
+   - '21'
+   - '22'
+   - '23'
+   - '24'
+   - '25'
+   - '26'
+   - '27'
+   - '28'
+   - '29'
+   - '30'
+
+gc_office_aircond_temp:
+  name: Office Temperature (°C)
   icon: mdi:thermometer
   initial: '16'
   options:

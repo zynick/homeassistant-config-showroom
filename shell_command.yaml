@@ -30,15 +30,14 @@ ds_office_light_2: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?
 ds_office_light_3: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?id=4%26groupID=1%26sceneNumber=18'
 ds_office_light_4: 'curl http://localhost:3000/ds/api?path=/json/zone/callScene?id=4%26groupID=1%26sceneNumber=19'
 
-# TODO not exactly a proper way to do it but will fix this later
-gc_dining_aircond_onoff: 'mosquitto_pub -t "smartbox/globalcache/set" -m "dining_onoff"'
-gc_office_aircond_onoff: 'mosquitto_pub -t "smartbox/globalcache/set" -m "office_onoff"'
 
 # scripting made things very, very flexible... (for POC only)
-globalcache_temperature: 'mosquitto_pub -t "smartbox/globalcache/set" -m "dining_{{states.input_select.globalcache_temperature.state}}"'
-
-
-
+# is there a better way to do this? cause we will need mosquitto client in order to execute this
+# TODO not exactly a proper way to do it but will fix this later
+gc_office_aircond_onoff: 'mosquitto_pub -t "smartbox/globalcache/set" -m "office_onoff"'
+gc_office_aircond_temp: 'mosquitto_pub -t "smartbox/globalcache/set" -m "office_{{states.input_select.gc_dining_aircond_temp.state}}"'
+gc_dining_aircond_onoff: 'mosquitto_pub -t "smartbox/globalcache/set" -m "dining_onoff"'
+gc_dining_aircond_temp: 'mosquitto_pub -t "smartbox/globalcache/set" -m "dining_{{states.input_select.gc_dining_aircond_temp.state}}"'
 
 
 # TODO only works if you made this service as a hass-daemon (duh)

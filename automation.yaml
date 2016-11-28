@@ -1,6 +1,13 @@
-- alias: 'GlobalCache Aircond Temperature'
+- alias: 'Dining Aircond Temperature'
   trigger:
     - platform: state
-      entity_id: input_select.globalcache_temperature
+      entity_id: input_select.gc_dining_aircond_temp
   action:
-    service: shell_command.globalcache_temperature
+    service: shell_command.gc_dining_aircond_temp
+
+- alias: 'Office Aircond Temperature'
+  trigger:
+    - platform: state
+      entity_id: input_select.gc_office_aircond_temp
+  action:
+    service: shell_command.gc_office_aircond_temp

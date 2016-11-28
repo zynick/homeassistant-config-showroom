@@ -9,7 +9,6 @@ default_view:
   entities:
     - group.card_cam_main_door
     - group.card_ds
-    - group.card_globalcache
 
 living:
   view: yes
@@ -24,6 +23,7 @@ dining:
   entities:
     - group.card_cam_dining_area
     - group.card_ds_dining
+    - group.card_gc_dining_aircond
 
 bedroom:
   view: yes
@@ -37,6 +37,7 @@ office:
   entities:
     - group.card_cam_office_area
     - group.card_ds_office
+    - group.card_gc_office_aircond
 
 cctv:
   view: yes
@@ -112,11 +113,17 @@ card_cam_living_room:
 card_cam_dining_area:
   - camera.dining_area
 
+card_gc_dining_aircond:
+  name: Dining Aircond
+  entities:
+    - script.gc_dining_aircond_onoff
+    - input_select.gc_dining_aircond_temp
+
 card_cam_office_area:
   - camera.office_area
 
-card_globalcache:
-  name: GlobalCache Aircond
+card_gc_office_aircond:
+  name: Office Aircond
   entities:
-    - script.gc_dining_aircond_onoff
-    - input_select.globalcache_temperature
+    - script.gc_office_aircond_onoff
+    - input_select.gc_office_aircond_temp
