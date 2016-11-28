@@ -38,7 +38,7 @@ gc_office_aircond_onoff: 'mosquitto_pub -t "smartbox/globalcache/set" -m "office
 gc_office_aircond_temp: 'mosquitto_pub -t "smartbox/globalcache/set" -m "office_{{states.input_select.gc_dining_aircond_temp.state}}"'
 gc_dining_aircond_onoff: 'mosquitto_pub -t "smartbox/globalcache/set" -m "dining_onoff"'
 gc_dining_aircond_temp: 'mosquitto_pub -t "smartbox/globalcache/set" -m "dining_{{states.input_select.gc_dining_aircond_temp.state}}"'
-
+gc_living_tv_onoff: 'mosquitto_pub -t "smartbox/globalcache/set" -m "tv_onoff"'
 
 # TODO only works if you made this service as a hass-daemon (duh)
 restart_ha: service hass-daemon restart &

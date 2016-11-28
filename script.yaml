@@ -112,6 +112,13 @@ ds_office_light_4:
   sequence:
     - service: shell_command.ds_office_light_4
 
+
+
+gc_living_tv_onoff:
+  alias: Living TV On Off
+  sequence:
+    - service: shell_command.gc_living_tv_onoff
+
 gc_dining_aircond_onoff:
   alias: Dining Aircond On Off
   sequence:

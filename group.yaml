@@ -16,6 +16,7 @@ living:
   entities:
     - group.card_cam_living_room
     - group.card_ds_living
+    - group.card_gc_living_tv
 
 dining:
   view: yes
@@ -104,26 +105,33 @@ card_ds_office:
     - script.ds_office_light_4
     - script.ds_office_light_0
 
+
 card_cam_main_door:
   - camera.main_door
 
 card_cam_living_room:
   - camera.living_room
 
+card_cam_office_area:
+  - camera.office_area
+
 card_cam_dining_area:
   - camera.dining_area
 
-card_gc_dining_aircond:
-  name: Dining Aircond
-  entities:
-    - script.gc_dining_aircond_onoff
-    - input_select.gc_dining_aircond_temp
 
-card_cam_office_area:
-  - camera.office_area
+card_gc_living_tv:
+  name: Living TV
+  entities:
+    - script.gc_living_tv_onoff
 
 card_gc_office_aircond:
   name: Office Aircond
   entities:
     - script.gc_office_aircond_onoff
     - input_select.gc_office_aircond_temp
+
+card_gc_dining_aircond:
+  name: Dining Aircond
+  entities:
+    - script.gc_dining_aircond_onoff
+    - input_select.gc_dining_aircond_temp
