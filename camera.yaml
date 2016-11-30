@@ -1,15 +1,19 @@
 - platform: ffmpeg
   name: Living Room
   input: !secret camera_1
+  ffmpeg_bin: /usr/local/bin/ffmpeg
 
 - platform: ffmpeg
   name: Main Door
   input: !secret camera_2
+  ffmpeg_bin: /usr/local/bin/ffmpeg
 
 - platform: ffmpeg
   name: Office Area
   input: !secret camera_3
+  ffmpeg_bin: /usr/local/bin/ffmpeg
 
 - platform: ffmpeg
   name: Dining Area
   input: !secret camera_4
+  ffmpeg_bin: /usr/local/bin/ffmpeg
