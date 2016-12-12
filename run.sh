@@ -5,6 +5,7 @@
 
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH
 
+# run in sudo because need to use port 80
 source /home/pi/hass/venv/bin/activate
 
 # for debugging purpose only
