@@ -8,8 +8,8 @@ FTP_PASS="$7E_wE6x3Ra$"
 # Export Path
 # export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH
 
-# Start ngrok
-ngrok http -region ap 80
+# Start ngrok in daemon mode
+ngrok http 80 -region ap > /dev/null &
 
 # Generate Redirect HTML
 URL="$(curl -s localhost:4040/api/tunnels | jq -r '.tunnels[1].public_url')"
