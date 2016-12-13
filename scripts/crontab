@@ -8,4 +8,4 @@
 @reboot sleep 15 && cd /home/pi/app/ha-gc && /usr/local/bin/node app
 
 # for demo only - use ngrok as remote access
-@reboot sleep 30 && /home/pi/hass/conf/redirect.sh
+@reboot sleep 30 && /home/pi/hass/conf/scripts/redirect.sh

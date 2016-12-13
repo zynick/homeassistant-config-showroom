@@ -3,4 +3,4 @@
 # reboot to temp fix ha-gc issue: connection get disconnected sometimes
 0 * * * * /sbin/reboot
 
-@reboot sleep 20 && /home/pi/hass/conf/run.sh
+@reboot sleep 20 && /home/pi/hass/conf/scripts/run.sh
