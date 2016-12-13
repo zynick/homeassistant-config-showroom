@@ -21,5 +21,4 @@ HTML="<html><head><meta HTTP-EQUIV=\"REFRESH\" content=\"0; url=$URL\"></head></
 echo $HTML > showroom.html
 
 # Upload Redirect HTML to website
-EXECUTE="curl -u '$FTP_USER:$FTP_PASS' -T showroom.html ftp://$FTP_HOST"
-bash -c "$EXECUTE"
+curl -u $FTP_USER:$FTP_PASS -T showroom.html ftp://$FTP_HOST
