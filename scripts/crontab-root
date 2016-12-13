@@ -1,6 +1,6 @@
 # m h  dom mon dow   command
 
 # reboot to temp fix ha-gc issue: connection get disconnected sometimes
-0 * * * * /sbin/reboot
+0 */3 * * * /sbin/reboot
 
 @reboot sleep 10 && /home/pi/hass/conf/scripts/run.sh
