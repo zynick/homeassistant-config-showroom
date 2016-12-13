@@ -4,8 +4,9 @@ FTP_HOST="ftp.smartboxasia.com"
 FTP_USER=""
 FTP_PASS=""
 
+
 # Export Path
-# export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH
 
 # Restart ngrok in daemon mode
 pkill ngrok
