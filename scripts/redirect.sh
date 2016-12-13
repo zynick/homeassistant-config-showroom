@@ -18,7 +18,7 @@ sleep 5
 # Generate Redirect HTML
 URL="$(curl -s localhost:4040/api/tunnels | jq -r '.tunnels[1].public_url')"
 HTML="<html><head><meta HTTP-EQUIV=\"REFRESH\" content=\"0; url=$URL\"></head></html>"
-echo $HTML > showroom.html
+echo $HTML > /var/tmp/showroom.html
 
 # Upload Redirect HTML to website
-curl -u $FTP_USER:$FTP_PASS -T showroom.html ftp://$FTP_HOST
+curl -u $FTP_USER:$FTP_PASS -T /var/tmp/showroom.html ftp://$FTP_HOST
