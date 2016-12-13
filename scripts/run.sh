@@ -9,4 +9,4 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH
 
 source /home/pi/hass/venv/bin/activate
 
-hass -c /home/pi/hass/conf &> /var/log/hass.log
+hass -c /home/pi/hass/conf
