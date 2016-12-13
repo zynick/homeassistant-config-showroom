@@ -3,9 +3,5 @@
 # for dev only - reverse ssh tunneling
 @reboot sleep  5 && /usr/bin/autossh -M 0 -q -N -f -o ServerAliveInterval=30 -o ServerAliveCountMax=10 -i /home/pi/.ssh/id_rsa -R 40404:localhost:22 ubuntu@52.77.67.116
 
-# start ha-ds & ha-gc
-@reboot sleep 10 && cd /home/pi/app/ha-ds && /usr/local/bin/node ./bin/www
-@reboot sleep 15 && cd /home/pi/app/ha-gc && /usr/local/bin/node app
-
 # for demo only - use ngrok as remote access
-@reboot sleep 30 && /home/pi/hass/conf/scripts/redirect.sh
+@reboot sleep 15 && /home/pi/hass/conf/scripts/redirect.sh
