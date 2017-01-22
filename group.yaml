@@ -56,10 +56,10 @@ cctv:
 ############################
 
 card_ds:
-  name: digitalSTROM Status
+  name: DigitalSTROM Status
   entities:
     # - script.restart_ha
-    - sensor.ds_power_consumption
+    - sensor.power_consumption
     - script.ds_scene_present
     - script.ds_scene_abscent
     - script.ds_scene_door_bell
@@ -68,12 +68,14 @@ card_ds:
 card_ds_living:
   name: Living Room
   entities:
-    - sensor.ds_living_room_light_status
+    - sensor.living_light_status
+    - sensor.power_consumption
     - script.ds_living_light_1
     - script.ds_living_light_2
     - script.ds_living_light_3
     - script.ds_living_light_4
     - script.ds_living_light_0
+    - input_slider.slider_living_light
 
 card_ds_dining:
   name: Dining Room

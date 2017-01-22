@@ -2,7 +2,7 @@
 - platform: rest
   resource: http://localhost:3000/ds/getLastCallSceneName?id=1&groupID=1
   method: GET
-  name: dS Living Room Light Status
+  name: Living Light Status
   value_template: '{{ value_json.result.name }}'
 
 - platform: rest
@@ -22,3 +22,14 @@
   method: GET
   name: dS Office Light Status
   value_template: '{{ value_json.result.name }}'
+
+
+
+
+# FIXME change the meter dsid (find it here http://localhost:3000/ds/api?path=/json/apartment/getCircuits)
+- platform: rest
+  resource: http://localhost:3000/ds/api?path=/json/circuit/getConsumption?id=303505d7f80002c0000034e3
+  method: GET
+  name: Power Consumption
+  value_template: '{{ value_json.result.consumption }}'
+  unit_of_measurement: W
